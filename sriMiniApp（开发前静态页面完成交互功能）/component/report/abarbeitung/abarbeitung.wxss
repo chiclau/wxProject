@@ -1,0 +1,145 @@
+/**
+*  整体页面
+*/
+
+.page-section {
+  background: #EEEEEE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0rpx 0rpx 0rpx 30rpx;
+  box-sizing: border-box;
+}
+
+/**
+*  input框
+*/
+.index-desc {
+  display: flex;
+  border-bottom: 1rpx solid #D8D8D8;
+  width: 100%;
+  height: 100rpx;
+}
+
+/**
+*  input框的标题
+*/
+
+.view-same {
+  width: 30%;
+  line-height: 100rpx;
+}
+
+/**
+*  input框的内容
+*/
+.details-text {
+  margin-top: 25rpx;
+}
+
+.details-text-name{
+  width: 455rpx;
+  margin-top:25rpx; 
+}
+.details-text-name2{
+  width: 216rpx;
+  margin-top:25rpx; 
+}
+
+/**
+*  input框中的图片展示
+*/
+
+.index-desc:nth-child(11) {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300rpx;
+  border: 0rpx solid red;
+}
+
+/**
+*  图片信息的样式
+*/
+
+.view-zone {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item_H {
+  position: relative;
+  display: inline-block;
+  margin-right: 20rpx;
+  width: 178rpx;
+  height: 178rpx;
+  background: white;
+  border: 1rpx solid #ededed;
+}
+.demo-text-1 {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 36rpx;
+}
+
+.demo-text-1:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.yinhuanshangbao-image {
+  width: 178rpx;
+  height: 178rpx;
+  border-radius: 5rpx;
+}
+
+/* 整改部分 */
+.audit-page{
+  margin-left: 30rpx;
+}
+
+.view-input{
+  margin-top: 25rpx;
+}
+.view-text{
+  margin-top: 25rpx;
+  margin-left: 5rpx;
+  margin-right: 50rpx; 
+}
+
+.page-body-button {
+  display: inline-block;
+  width: 45%;
+  margin-top: 50rpx;
+  margin-left: 15rpx;
+  font-size: 40rpx;
+  border-radius: 5rpx;
+  background: #5387ff;
+  color: white;
+}
+
+/* 上传图片 */
+.picker-image{
+  width: 180rpx;
+  display: inline-block;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+
+/* 删除图标 */
+.icon-small {
+  position: absolute;
+  z-index: 1000000;
+  right: -17rpx;
+  top: -2rpx;
+}

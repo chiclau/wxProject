@@ -1,0 +1,33 @@
+<view class="swiper-tab">
+  <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">隐患详情</view>
+  <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">进度详情</view>
+</view>
+
+<swiper current="{{currentTab}}" duration="300" style="height:{{winHeight - 45}}px" bindchange="swiperTab">
+  <swiper-item>
+    <scroll-view scroll-x="false" scroll-y="true" class='scroll-views'>
+    <!-- 导入隐患详情组件-->
+      <details/>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-x="false" scroll-y="true" class='scroll-views'>
+
+      <zan-cell-group>
+        <zan-cell>
+          <zan-steps type="vertical" hasDesc steps="{{steps}}"></zan-steps>
+        </zan-cell>
+      </zan-cell-group>
+
+    </scroll-view>
+
+  </swiper-item>
+</swiper>
+
+
+
+
+<!--
+<video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+  binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+  -->

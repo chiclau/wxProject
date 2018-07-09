@@ -1,0 +1,21 @@
+<view class='container-big'>
+  <view class="msg-left">
+    <image src="image/xiaoxi-tu1@2x.png" class="msg-img"></image>
+  </view>
+  <view class="msg-right">
+    <text>系统信息</text>
+    <text>2018-12-12</text>
+    <text>安全隐患排查操作手册已更新……</text>
+  </view>
+</view>
+
+<view class='container-big'>
+  <view class="msg-left">
+    <image src="image/xiaoxi-tu2@2x.png" class="msg-img"></image>
+  </view>
+  <view class="msg-right">
+    <text>亚洲一部项目安全隐患未审核信息</text>
+    <text>2018-12-13</text>
+    <text>亚洲一部项目安全隐患未审核信息，红绿灯处没有护栏</text>
+  </view>
+</view>

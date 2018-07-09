@@ -1,0 +1,134 @@
+/* input样式 */
+
+.index-desc {
+  display: flex;
+  border-bottom: 1rpx solid #ededed;
+  width: 100%;
+  height: 100rpx;
+}
+
+.index-desc-imges {
+  border-bottom: 1rpx solid #ededed;
+  width: 100%;
+}
+
+.view-same {
+  width: 30%;
+  line-height: 100rpx;
+}
+
+.index-desc input {
+  width: 70%;
+  height: 100rpx;
+}
+
+/* 底部button的样式 */
+
+.page-section {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0rpx 0rpx 0rpx 30rpx;
+  box-sizing: border-box;
+}
+
+/* 现场问题 */
+
+.index-desc:nth-child(6) {
+  display: flex;
+  flex-wrap: wrap;
+  height: 270rpx;
+  border: 0rpx solid red;
+}
+
+.view-zone {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: white;
+}
+
+textarea {
+  display: block;
+  width: 96%;
+  height: 194rpx;
+  background: #f6f6f6;
+  overflow: scroll;
+}
+
+/* 图片信息 */
+
+.index-desc:nth-child(8) {
+  display: block;
+  width: 100%;
+  height: 270rpx;
+  border: 0rpx solid red;
+}
+
+.view-zone {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: white;
+}
+
+scroll-view {
+  height: 178rpx;
+  background: #f6f6f6;
+  overflow: auto;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  margin-right: 20rpx;
+  width: 178rpx;
+  height: 178rpx;
+  border: 1rpx solid #ededed;
+}
+
+.icon-small {
+  position: absolute;
+  z-index: 1000000;
+  right: -17rpx;
+  top: -2rpx;
+}
+
+.yinhuanshangbao-image {
+  width: 178rpx;
+  height: 178rpx;
+  border-radius: 5rpx;
+}
+
+/* 隐藏滚动条 */
+
+::-webkit-scrollbar {
+  width: 0rpx;
+  height: 0rpx;
+  color: transparent;
+}
+
+/* 底部button样式 */
+
+.page-body-button {
+  display: inline-block;
+  width: 45%;
+  margin-left: 15rpx;
+  font-size: 40rpx;
+  border-radius: 5rpx;
+  background: #5387ff;
+  color: white;
+}
+
+.picker-image{
+  width: 180rpx;
+  display: inline-block;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}

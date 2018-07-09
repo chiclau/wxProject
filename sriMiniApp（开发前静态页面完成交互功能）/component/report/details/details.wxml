@@ -1,0 +1,58 @@
+<view class="page-section">
+  <view class="index-desc">
+    <view class='view-same'>隐患标题 :</view>
+    <text class="details-text">安全隐患报告1</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>隐患类型 :</view>
+    <text class="details-text">一般隐患/人身安全/交通安全</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>上报人 :</view>
+    <text class="details-text">张三/136XXXXXXXX</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>工程部位 :</view>
+    <text class="details-text">施工现场入口转角处</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>隐患描述 :</view>
+    <text class="details-text">施工现场入口转角处红绿灯失效</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>隐患状态 :</view>
+    <text class="details-text">处理中</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>修改完成期限 :</view>
+    <text class="details-text">2018-12-12</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>项目安全员 :</view>
+    <text class="details-text">张苏纳</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>施工队安全员 :</view>
+    <text class="details-text">李忠明</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>班组长 :</view>
+    <text class="details-text">赵中虚</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-zone'>相关图片 :</view>
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+      <view id="itemone" class="scroll-view-item_H demo-text-1" wx:for="{{imgalist}}" wx:for-item="image">
+        <image src="{{image}}" data-src="{{image}}" class='yinhuanshangbao-image' bindtap="previewImage">
+        </image>
+      </view>
+    </scroll-view>
+    <view class='view-zone'>整改后图片 :</view>
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+      <view id="itemone" class="scroll-view-item_H demo-text-1" wx:for="{{imgalist}}" wx:for-item="image">
+        <image src="{{image}}" data-src="{{image}}" class='yinhuanshangbao-image' bindtap="previewImage">
+        </image>
+      </view>
+    </scroll-view>
+  </view>
+</view>

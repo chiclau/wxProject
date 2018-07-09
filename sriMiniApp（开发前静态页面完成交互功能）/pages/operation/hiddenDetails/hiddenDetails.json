@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "隐患详情",
+  "usingComponents": {
+    "details": "../../../component/report/details/details",
+    "zan-cell": "../../../component/comm/cell/index",
+    "zan-cell-group": "../../../component/comm/cell-group/index",
+    "zan-panel": "../../../component/comm/panel/index",
+    "zan-steps": "../../../component/comm/steps/index"
+  }
+}

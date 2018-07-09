@@ -1,0 +1,151 @@
+<view class="page-section">
+  <view class="index-desc">
+    <view class='view-same'>隐患标题 :</view>
+    <text class="details-text">安全隐患报告1</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>隐患类型 :</view>
+    <text class="details-text">一般隐患/人身安全/交通安全</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>上报人 :</view>
+    <text class="details-text">张三/136XXXXXXXX</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>工程部位 :</view>
+    <text class="details-text">施工现场入口转角处</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>隐患描述 :</view>
+    <text class="details-text">施工现场入口转角处红绿灯失效</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>隐患状态 :</view>
+    <text class="details-text">处理中</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>修改完成期限 :</view>
+    <text class="details-text">2018-12-12</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>项目安全员 :</view>
+    <text class="details-text">张苏纳</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>施工队安全员 :</view>
+    <text class="details-text">李忠明</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>班组长 :</view>
+    <text class="details-text">赵中虚</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-zone'>相关图片 :</view>
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+      <view id="itemone" class="scroll-view-item_H demo-text-1" wx:for="{{imgalist}}" wx:for-item="image">
+        <image src="{{image}}" data-src="{{image}}" class='yinhuanshangbao-image' bindtap="previewImage">
+        </image>
+      </view>
+    </scroll-view>
+
+  </view>
+
+
+
+
+
+
+</view>
+
+<view class="audit-page">
+  <!-- 隐患审核部分 -->
+  <view class="index-desc" bindtap="hiddentype">
+    <view class='view-same'>是否隐患 :</view>
+    <text class="details-text-name">{{hiddentype_name}}</text>
+    <text class="details-text">></text>
+  </view>
+  <view hidden="{{hiddentype_name != '一般隐患' || hiddentype_name == '不是隐患'}}">
+    <view class="index-desc">
+      <view class='view-same'>一般隐患 :</view>
+      <text class="details-text-name2">人身安全隐患</text>
+      <text class="details-text">></text>
+      <text class="details-text-name2">人身安全隐患</text>
+      <text class="details-text">></text>
+    </view>
+  </view>
+  <view hidden="{{hiddentype_name != '重大隐患' || hiddentype_name == '不是隐患'}}">
+    <view class="index-desc">
+      <view class='view-same'>重大隐患 :</view>
+      <text class="details-text-name2">人身安全隐患</text>
+      <text class="details-text">></text>
+      <text class="details-text-name2">人身安全隐患</text>
+      <text class="details-text">></text>
+    </view>
+  </view>
+  <view hidden="{{ hiddentype_name == '不是隐患'}}">
+    <view class="index-desc">
+      <view class='view-same'>下发通知 :</view>
+      <text class="details-text">感谢你的上报,你上报的隐患经……</text>
+    </view>
+  </view>
+  <view hidden="{{hiddentype_name == '不是隐患'}}">
+    <view class="index-desc">
+      <view class='view-same'>下达接收人 :</view>
+      <text class="details-text-name">张翔</text>
+      <text class="details-text">></text>
+    </view>
+  </view>
+  <view hidden="{{hiddentype_name != '重大隐患' || hiddentype_name == '不是隐患'}}">
+    <view class="index-desc">
+      <view class='view-same'>整改负责人 :</view>
+      <text class="details-text-name">张翔</text>
+      <text class="details-text">></text>
+    </view>
+  </view>
+  <view hidden="{{hiddentype_name == '不是隐患'}}">
+    <view class="index-desc">
+      <view class='view-same'>整改所需资金 :</view>
+      <text class="details-text">12000元</text>
+    </view>
+  </view>
+  <view hidden="{{hiddentype_name != '一般隐患' || hiddentype_name == '不是隐患'}}">
+    <view class="index-desc">
+      <view class='view-same'>整改期限 :</view>
+      <picker mode="date" value="{{date}}" start="1900-01-01" end="3000-09-01" bindchange="bindDateLeft">
+        <view class="details-text">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+  <view hidden="{{hiddentype_name != '重大隐患' || hiddentype_name == '不是隐患'}}">
+    <view class="index-desc">
+      <view class='view-same'>方案完成时间 :</view>
+      <picker mode="date" value="{{date}}" start="1900-01-01" end="3000-09-01" bindchange="bindDateLeft">
+        <view class="details-text">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+  <view hidden="{{hiddentype_name != '重大隐患' || hiddentype_name == '不是隐患'}}">
+    <view class="index-desc">
+      <view class='view-same'>整改完成期限 :</view>
+      <picker mode="date" value="{{date}}" start="1900-01-01" end="3000-09-01" bindchange="bindDateLeft">
+        <view class="details-text">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+  <view hidden="{{hiddentype_name != '一般隐患' || hiddentype_name == '不是隐患'}}">
+    <view class="index-suggest">
+      <view>整改建议 :</view>
+      <textarea class="index-textarea" placeholder="请输入问题情况限100个字" placeholder-style="color:#767676;" />
+    </view>
+  </view>
+  <view hidden="{{hiddentype_name != '重大隐患' || hiddentype_name == '不是隐患'}}">
+    <view class="index-suggest">
+      <view>预防措施（概述） :</view>
+      <textarea class="index-textarea" placeholder="请输入问题情况限100个字" placeholder-style="color:#767676;" />
+    </view>
+  </view>
+
+
+  <button class="page-body-button" from-type='submit'>返回</button>
+  <button class="page-body-button" bindtap='submitAudit'>确认审核</button>
+</view>

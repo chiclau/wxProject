@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "隐患复查",
+  "usingComponents": {
+    "review": "../../../../component/report/review/review",
+    "zan-cell": "../../../../component/comm/cell/index",
+    "zan-cell-group": "../../../../component/comm/cell-group/index",
+    "zan-panel": "../../../../component/comm/panel/index",
+    "zan-steps": "../../../../component/comm/steps/index"
+  }
+}

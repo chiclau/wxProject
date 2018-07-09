@@ -1,0 +1,96 @@
+<view class="page-section">
+  <view class="index-desc">
+    <view class='view-same'>隐患标题 :</view>
+    <text class="details-text">安全隐患报告1</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>隐患类型 :</view>
+    <text class="details-text">一般隐患/人身安全/交通安全</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>上报人 :</view>
+    <text class="details-text">张三/136XXXXXXXX</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>工程部位 :</view>
+    <text class="details-text">施工现场入口转角处</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>隐患描述 :</view>
+    <text class="details-text">施工现场入口转角处红绿灯失效</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>隐患状态 :</view>
+    <text class="details-text">处理中</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>修改完成期限 :</view>
+    <text class="details-text">2018-12-12</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>项目安全员 :</view>
+    <text class="details-text">张苏纳</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>施工队安全员 :</view>
+    <text class="details-text">李忠明</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>班组长 :</view>
+    <text class="details-text">赵中虚</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-zone'>相关图片 :</view>
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+      <view id="itemone" class="scroll-view-item_H demo-text-1" wx:for="{{imgalist}}" wx:for-item="image">
+        <image src="{{image}}" data-src="{{image}}" class='yinhuanshangbao-image' bindtap="previewImage">
+        </image>
+      </view>
+    </scroll-view>
+
+  </view>
+</view>
+
+<view class="audit-page">
+  <!-- 隐患整改部分 -->
+  <view class='view-zone'>整改后图片 :</view>
+  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+    <view id="itemone" class="scroll-view-item_H demo-text-1" wx:for="{{imgalist}}" wx:for-item="image">
+      <image src="{{image}}" data-src="{{image}}" class='yinhuanshangbao-image' bindtap="previewImage">
+      </image>
+    </view>
+  </scroll-view>
+  <view class="index-desc" bindtap="hiddentype">
+    <view class='view-same'>整改结果 :</view>
+    <text class="details-text-name">{{hiddentype_name}}</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>整改是否通过 :</view>
+    <radio-group>
+      <radio class="view-input" value="r1" checked="true" />
+      <text class='view-text'>已通过</text>
+      <radio class="view-input" value="r1" />
+      <text class="view-text">未通过</text>
+    </radio-group>
+  </view>
+
+  <view class="index-desc">
+    <view class='view-same'>施工队负责人 :</view>
+    <text class="details-text-name2">施工二部/张锋</text>
+  </view>
+
+  <view class="index-desc">
+    <view class='view-same'>班组负责人 :</view>
+    <text class="details-text-name2">二班/钱奎</text>
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>隐患最终得分 :</view>
+    <input class="view-input" placeholder-style="color:#c7c7c7" type="number" placeholder="请输入最终得分" />
+  </view>
+  <view class="index-desc">
+    <view class='view-same'>意见/建议 :</view>
+    <input class="view-input" placeholder-style="color:#c7c7c7" name='shigongdanwei' placeholder="请输入意见/建议" />
+  </view>
+  <button class="page-body-button" from-type='submit'>返回</button>
+  <button class="page-body-button" bindtap='submitAudit'>完成</button>
+</view>

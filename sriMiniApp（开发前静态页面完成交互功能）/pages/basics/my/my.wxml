@@ -1,0 +1,43 @@
+<!--pages/basics/my/my.wxml-->
+<view class='my-container'>
+    <image class='my-img' src='image/wode-beijingtu.png'></image>
+    <view class="index">
+      <image class="my-headPortrait" src="{{userInfo != null ? userInfo.avatarUrl: 'image/wode-touxiang@2x.png'}}"></image>
+      <block wx:if="{{userInfo!=null}}">
+        <view bindtap='login'>
+          <view class='my-headPortrait-login'>立即登陆</view>
+          <view class='my-headPortrait-jiantou'>></view>
+        </view>
+      </block>
+      <block wx:else>
+        <view>
+          <view class="my-headPortrait-username">张三 136XXXXXXXX</view>
+          <view class="my-headPortrait-project">亚洲一部 / 项目经理</view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 我的操作 -->
+    <view class="content">
+      <view class='content-abarbeitung' bindtap='score'>
+        <image class="content-imges" src="image/wode-jifen@2x.png" />
+        <text class="content-abarbeitung-text">我的积分</text>
+      </view>
+      <view class='content-abarbeitung' bindtap=''>
+        <image class="content-imges" src="image/wode-fankui@2x.png" />
+        <text class="content-abarbeitung-text">情况反馈</text>
+      </view>
+    </view>
+
+    <!-- 情况反馈和帮助 -->
+    <view class="content">
+      <view class='content-abarbeitung' bindtap=''>
+        <image class="content-imges" src="image/wode-bangding.png"></image>
+        <text class="content-abarbeitung-text">解除绑定</text>
+      </view>
+      <view class='content-abarbeitung' bindtap=''>
+        <image class="content-imges" src="image/wode-bangzhu@2x.png" />
+        <text class="content-abarbeitung-text">小程序使用帮助</text>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,243 @@
+/* 引入的隐患列表 */
+.newreport{
+  margin-top: 80rpx;
+}
+
+/* 下拉菜单 */
+.choice-bar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100vw;
+  font-size: 16px;
+  background-color: #fff;
+  z-index: 9;
+}
+
+.chioce-item {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  width: 25%;
+  height: 80rpx;
+  border-top: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+  border-left: 1rpx solid #ddd;
+  /*border-right: 1rpx solid #ddd;*/
+}
+
+.chioce-item-text {
+  width: 150rpx;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.chioce-item-text-selected {
+  width: 150rpx;
+  color: #0093fd;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chioce-item-last {
+  border-right: none;
+}
+
+.chioce-item-first {
+  border-left: none;
+}
+
+.icon-chioce {
+  height: 18rpx;
+  width: 33rpx;
+}
+
+.icon-upreport {
+  height: 35rpx;
+  width: 35rpx;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.time-list, .proj-list, .state-list {
+  margin-top: 2rpx;
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: -1;
+  font-size: 14px;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.chioce-list-show {
+  top: 80rpx;
+  animation: slide 500ms;
+}
+
+@keyframes slide {
+  0% {
+    top: -500rpx;
+  }
+
+  100% {
+    top: 80rpx;
+  }
+}
+
+.chioce-list-hide {
+  display: none !important;
+}
+
+/* 工程拆分 */
+
+.proj-list {
+  display: flex;
+}
+
+.proj-left {
+  width: 30%;
+  flex-grow: 1;
+}
+
+.proj-right {
+  width: 70%;
+  flex-grow: 4;
+}
+
+.scroll-proj {
+  height: 500rpx;
+}
+
+.proj-parent {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #ddd;
+  border-right: 1rpx solid #ddd;
+  background-color: #f0f0f0;
+}
+
+.proj-parent-active {
+  background-color: #fff;
+}
+
+.proj-children {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 40rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+/* 时间拆分 */
+
+.time-item {
+  height: 280rpx;
+}
+
+.time-text {
+  height: 64rpx;
+  padding-left: 20rpx;
+  line-height: 64rpx;
+}
+
+.time-container {
+  display: flex;
+  height: 100rpx;
+}
+
+.time-start {
+  width: 36%;
+  margin-left: 4%;
+  height: 60rpx;
+}
+
+.time-center {
+  width: 16%;
+  height: 2rpx;
+  background: #d7d7d7;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 30rpx;
+}
+
+.time-end {
+  width: 36%;
+  height: 60rpx;
+}
+
+.time-end view {
+  width: 100%;
+  height: 60rpx;
+  background: #f6f6f6;
+  text-align: center;
+  border-radius: 26rpx;
+  line-height: 60rpx;
+}
+
+.time-start view {
+  width: 100%;
+  height: 60rpx;
+  background: #f6f6f6;
+  border-radius: 26rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+/*筛选*/
+
+.state-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 40rpx;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-selected {
+  height: 30rpx;
+  width: 30rpx;
+}
+
+.state-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.state-footer button {
+  margin: 20rpx 80rpx;
+  border-radius: 0 !important;
+}
+
+.button-reset {
+  border: 1rpx solid #ddd !important;
+  color: #666 !important;
+}
+
+/* 提交时间按钮 */
+.page-body-button {
+  display: inline-block;
+  width: 44%;
+  height: 80rpx;
+  margin-left: 4%;
+  border-radius: 5rpx;
+  background: #5387ff;
+  color: white;
+  line-height: 80rpx;
+}

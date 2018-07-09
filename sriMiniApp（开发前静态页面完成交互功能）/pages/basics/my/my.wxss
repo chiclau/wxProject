@@ -1,0 +1,90 @@
+/* pages/basics/my/my.wxss */
+.my-container{
+  position: relative;
+}
+.my-img{
+  position: absolute;
+  z-index:2;
+  width: 100%;
+  height:240rpx;
+}
+.index{
+   position: relative;
+  z-index: 444; 
+   top:0rpx; 
+
+  height:240rpx;
+  display: flex;
+}
+
+.my-headPortrait{
+  width: 150rpx;
+  height: 150rpx;
+  margin-left:80rpx;
+  margin-top: 45rpx;
+  border-radius: 75rpx;
+}
+
+.my-headPortrait-jiantou{
+  width: 100rpx;
+  position: relative;
+  bottom: 70rpx;
+  left:270rpx; 
+  color: white;
+  font-size: 45rpx;
+}
+
+.content{
+  background: white;
+  width: 100%;
+  margin-top: 30rpx;
+}
+
+.content-abarbeitung{
+  height:100rpx;
+  line-height:100rpx;
+  background: white;
+}
+
+.content-imges{
+  width: 40rpx;
+  height:40rpx;
+  position: relative;
+  top: 10rpx;
+  margin-left:30rpx; 
+}
+
+.content-abarbeitung-text{
+  margin-left:30rpx; 
+}
+
+.content-abarbeitung:nth-child(1){
+  border-bottom:1rpx solid #EFEFEF;
+}
+
+.my-headPortrait-login{
+  display: flex;
+  width: 350rpx;
+  padding-left: 60rpx;
+  font-size: 45rpx;
+  color: white;
+  margin-top: 88rpx;
+}
+
+.my-headPortrait-username{
+  display: flex;
+  width: 350rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  color: white;
+  margin-top: 70rpx;
+}
+
+.my-headPortrait-project{
+  display: flex;
+  width: 350rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  color: white;
+  margin-top: 10rpx;
+}

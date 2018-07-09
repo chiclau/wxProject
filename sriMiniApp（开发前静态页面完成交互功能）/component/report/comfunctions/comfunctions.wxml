@@ -1,0 +1,47 @@
+<!-- index-db 模块的样式  -->
+<view class="index-bd">
+  <view class="kind-list">
+
+    <view class="kind-list-top">
+      常用功能
+      <view class="kind-list-top-item"></view>
+      <view class="kind-list-top-item"></view>
+      <view class="kind-list-top-item"></view>
+      <view class="kind-list-top-item"></view>
+      <view class="kind-list-top-item"></view>
+      <view class="kind-list-top-item"></view>
+    </view>
+    <view class='kind-list-bottom'>
+      <navigator url="../../operation/hiddenQuery/hiddenQuery" class="navigator">
+        <view class='kind-list-bottom-item'>
+          <image class="controlImg" src="../images/1.png"></image>
+          <view class="controlText">隐患排查</view>
+        </view>
+      </navigator>
+      <navigator url="../../operation/clockin/clockin" class="navigator">
+        <view class='kind-list-bottom-item'>
+          <image class="controlImg" src="../images/2.png"></image>
+          <view class="controlText">打卡签到</view>
+        </view>
+      </navigator>
+      <navigator url="" class="navigator">
+        <view class='kind-list-bottom-item'>
+          <image class="controlImg" src="../images/3.png"></image>
+          <view class="controlText">设备查询</view>
+        </view>
+      </navigator>
+      <navigator url="../../operation/hiddenQuery/hiddenQuery" class="navigator">
+        <view class='kind-list-bottom-item'>
+          <image class="controlImg" src="../images/5.png"></image>
+          <view class="controlText">统计</view>
+        </view>
+      </navigator>
+      <navigator url="" class="navigator">
+        <view class='kind-list-bottom-item'>
+          <image class="controlImg" src="../images/6.png"></image>
+          <view class="controlText">帮助</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,104 @@
+<view class='newHidden-newrepot'>
+  
+  <!-- 最新隐患详细信息 -->
+  <!--
+  <view class='newHidden-newrepo-container' wx:for="{{list}}" wx:key="rname" wx:for-item="item">-->
+    <!-- 引用自定义隐患组件 -->
+    <!-- 
+    <navigator url="../../../pages/operation/hiddenDetails/hiddenDetails" class="navigator-new">
+      <image class='newHidden-newrepo-container-image' src="../images/7.png"></image>
+      <view class='newHidden-newrepo-container-total'>
+        <view>{{item.riskname}}</view>
+        <view>
+          <view>上报人：{{item.rname}}</view>
+          <view>上报时间：{{item.rtime}}</view>
+          <view>
+            <text wx:if="{{item.rtype == 1}}">隐患类型：轻微隐患</text>
+            <text wx:if="{{item.rtype == 2}}">隐患类型：中等隐患</text>
+            <text wx:if="{{item.rtype == 4}}">隐患类型：重大隐患</text>
+            <view wx:if="{{item.rstate == 0}}">待审批</view>
+            <view wx:if="{{item.rstate == 1}}">处理中</view>
+            <view wx:if="{{item.rstate == 3}}">已完成</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+   -->
+
+  <view class='newHidden-newrepo-container'>
+    <!-- 引用自定义隐患组件 -->
+    <navigator url="{{types == 0?'../../../pages/operation/hiddenDetails/hiddenDetails':types == 1 ? '../../../pages/operation/hiddenQuery/hiddenAudit/hiddenAudit' :types == 2? '../../../pages/operation/hiddenQuery/hiddenReview/hiddenReview':'../../../pages/operation/hiddenDetails/hiddenDetails'}}" class="navigator-new">
+      <image class='newHidden-newrepo-container-image' src="../images/7.png"></image>
+      <view class='newHidden-newrepo-container-total'>
+        <view>安全事件综合</view>
+        <view>
+          <view>上报人：张三</view>
+          <view>上报时间：2018-12-12</view>
+          <view>
+            <text>隐患类型：轻微隐患</text>
+            <view>未审核</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class='newHidden-newrepo-container'>
+    <!-- 引用自定义隐患组件 -->
+    <navigator url="{{types == 0?'../../../pages/operation/hiddenDetails/hiddenDetails':types == 1 ? '../../../pages/operation/hiddenQuery/hiddenAudit/hiddenAudit' :types == 2? '../../../pages/operation/hiddenQuery/hiddenReview/hiddenReview':'../../../pages/operation/hiddenDetails/hiddenDetails'}}" class="navigator-new">
+      <image class='newHidden-newrepo-container-image' src="../images/7.png"></image>
+      <view class='newHidden-newrepo-container-total'>
+        <view>安全事件综合</view>
+        <view>
+          <view>上报人：张三</view>
+          <view>上报时间：2018-12-12</view>
+          <view>
+            <text>隐患类型：轻微隐患</text>
+            <view>已复查</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class='newHidden-newrepo-container'>
+    <!-- 引用自定义隐患组件 -->
+    <navigator url="{{types == 0?'../../../pages/operation/hiddenDetails/hiddenDetails':types == 1 ? '../../../pages/operation/hiddenQuery/hiddenAudit/hiddenAudit' :types == 2? '../../../pages/operation/hiddenQuery/hiddenReview/hiddenReview':'../../../pages/operation/hiddenDetails/hiddenDetails'}}" class="navigator-new">
+      <image class='newHidden-newrepo-container-image' src="../images/7.png"></image>
+      <view class='newHidden-newrepo-container-total'>
+        <view>安全事件综合</view>
+        <view>
+          <view>上报人：张三</view>
+          <view>上报时间：2018-12-12</view>
+          <view>
+            <text>隐患类型：中等隐患</text>
+            <view>未审核</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class='newHidden-newrepo-container'>
+    <!-- 引用自定义隐患组件 -->
+    <navigator url="../../../pages/operation/hiddenQuery/hiddenAbarbeitung/hiddenAbarbeitung" class="navigator-new">
+      <image class='newHidden-newrepo-container-image' src="../images/7.png"></image>
+      <view class='newHidden-newrepo-container-total'>
+        <view>安全事件综合</view>
+        <view>
+          <view>上报人：张三</view>
+          <view>上报时间：2018-12-12</view>
+          <view>
+            <text>隐患类型：重大隐患</text>
+            <view>已复查</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+
+
+
+
+
+
+</view>

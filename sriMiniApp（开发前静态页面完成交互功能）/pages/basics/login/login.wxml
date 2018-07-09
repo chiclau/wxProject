@@ -1,0 +1,20 @@
+<view class="container">
+  <image src='login-image/login.png' class='image-login'></image>
+  <view class="page-body">
+      <view class="page-section">
+          <form bindsubmit="ubmit" catchreset="formReset">
+            <view class="index-desc">
+              <input placeholder-style="color:#c7c7c7" id="userAcct" name="userAcct" placeholder="请输入账号" />
+              <image src='login-image/zhanghao.png'></image>
+            </view>
+            <view class="index-desc">
+              <input placeholder-style="color:#c7c7c7" id="userPwd" name="userPwd" password type="text" maxlength='12' placeholder="请输入密码" />
+              <image src='login-image/mima.png'></image>
+            </view>
+          <!--  <button class="page-body-button" formType='submit'open-type="getUserInfo" bindgetuserinfo='userOpenId'>登录</button> -->
+            
+            <button class="page-body-button" formType='submit'open-type="getUserInfo" bindtap='qwe'>登录</button>
+          </form>
+      </view>
+    </view>
+</view>

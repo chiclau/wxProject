@@ -1,0 +1,28 @@
+<!-- 引入底部导航 -->
+<import src="nav/nav" />
+
+<!-- 引入统计组件 -->
+<view hidden="{{navDataIndex != 0}}">
+<count />
+</view>
+
+<!-- 引入隐患审核和隐患整改组件 -->
+<view hidden="{{navDataIndex != 1 && navDataIndex !=2}}">
+  <audit list="{{list}}" types="{{hiddenType}}" />
+</view>
+
+<!-- 引入隐患查询组件 -->
+<view hidden="{{navDataIndex != 3}}">
+  <select list="{{list}}"  types="{{hiddenType}}" />
+</view>
+
+<!-- 引入隐患上报组件 -->
+<view hidden="{{navDataIndex != 4}}">
+  <upreport list="{{list}}"  types="{{hiddenType}}" />
+</view>
+
+<view class="flex fix_nav_wp">
+  <block wx:for="{{navData}}" wx:key="name">
+    <template is="nav" data="{{...item}}" />
+  </block>
+</view>

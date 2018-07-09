@@ -1,0 +1,111 @@
+/* component/report/newreport/newreport.wxss */
+/* newHidden模块的样式 */
+
+.newHidden {
+  display: flex;
+  height: 88rpx;
+  padding: 0rpx 30rpx 0rpx 30rpx;
+  background: white;
+}
+
+.newHidden-left {
+  width: 6rpx;
+  height: 38rpx;
+  margin-top: 35rpx;
+  border-radius: 10rpx;
+  background: #4779fe;
+}
+
+.newHidden-center {
+  margin-left: 14rpx;
+  margin-top: 36rpx;
+  font-size: 28rpx;
+  color: #303030;
+}
+
+.newHidden-right {
+  margin-left: 12rpx;
+  margin-top: 48rpx;
+  font-size: 14rpx;
+  color: #303030;
+}
+
+/* newHidden-newreport  */
+.newHidden-newrepot {
+  padding: 0rpx 30rpx 0rpx 30rpx;
+  background: white;
+}
+
+.newHidden-newrepo-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigator-new {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18rpx;
+  width: 100%;
+  height: 240rpx;
+}
+
+.newHidden-newrepo-container-image {
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.newHidden-newrepo-container-total {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30rpx;
+  align-items: space-between;
+  width: 420rpx;
+  height: 240rpx;
+  background: white;
+}
+
+.newHidden-newrepo-container-total view:nth-child(1) {
+  height: 85rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+  color: #303030;
+  width: 100%;
+}
+
+.newHidden-newrepo-container-total view:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 24rpx;
+}
+
+.newHidden-newrepo-container-total view:nth-child(2) view {
+  width: 100%;
+  color: #7f7f7f;
+  font-size: 24rpx;
+  
+}
+
+.newHidden-newrepo-container-total view:nth-child(2) view:nth-child(1) {
+  height: 38rpx;
+}
+
+.newHidden-newrepo-container-total view:nth-child(2) view:nth-child(3) {
+  position: relative;
+}
+
+.newHidden-newrepo-container-total view:nth-child(2) view:nth-child(3) view {
+  position: absolute;
+  right: 0rpx;
+  top: -10rpx;
+  width: 94rpx;
+  height: 35rpx;
+  justify-content: center;
+  color: #65e353;
+  text-align: center;
+  line-height: 35rpx;
+  border-radius: 5rpx;
+  border: 1px solid #65e353;
+}

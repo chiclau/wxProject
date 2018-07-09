@@ -1,0 +1,11 @@
+<view class='punch-container'>
+    <image class='punch-background' src='image/qiandao-beijtu.png'></image>
+    <image class='punch-img' src='image/qiandao-weizhi.png'></image>
+    <image class='punch-imginner' src='image/dakaimg.png'></image>
+    <text class='punch-textfirst'>洛斯达数字遥感技术公司 ></text>
+    <text class='punch-textsecond'>北京市西城区安德路65-2</text>
+    <view class='punch-button'>
+        <text>{{time}}</text>
+        <text>上班签到</text>
+    </view>
+</view>

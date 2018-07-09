@@ -1,0 +1,21 @@
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-weight: bold;
+}
+.swiper-tab-item{
+    display: inline-block;
+    width: 50%;
+    color:#9B9B9B;
+}
+.active{
+    color:#0294FF;
+    border-bottom: 4rpx solid #426CDD;
+}
+
+.scroll-views{
+  height: 100%;
+}

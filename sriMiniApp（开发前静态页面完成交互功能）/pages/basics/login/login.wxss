@@ -1,0 +1,45 @@
+
+.image-login{
+  width: 100%;
+  height:428rpx;
+}
+.page-body{
+  background: white;
+}
+.index-desc{
+  position: relative;
+  border-bottom:1rpx solid #b6b6b6;
+  width: 100%;
+  height:100rpx;
+}
+.index-desc image{
+  position: absolute;
+  left:13rpx;
+  bottom:26rpx;
+  height:52rpx;
+  width:48rpx;
+}
+.index-desc input{
+  width: 80%;
+  margin-left:20%;
+  height:100rpx;
+}
+.page-section {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+
+.page-body-button {
+  width: 100%;
+  font-size:40rpx;
+   margin-top:60rpx;
+  border-radius: 0rpx;
+  background: #5387ff;
+  color:white;
+}

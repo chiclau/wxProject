@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+      "newreport" : "../../../component/report/newreport/newreport",
+      "comfunctions" : "../../../component/report/comfunctions/comfunctions"
+    }
+}

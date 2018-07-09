@@ -1,0 +1,76 @@
+<image class='myscore-img' src='image/myscore.png'></image>
+<view class='myscore-message'>
+    <text class='mess'>当前积分</text>
+    <text>32</text>
+</view>
+<image class='jifen' src='image/jifen.png'></image>
+<view class='myscore-container'>
+    <view class='myscore-first'>
+         <text class='myscore-firsttext'>|</text>
+         <text class='myscore-secondtext'>积分明细</text>
+         <picker mode="date" value="{{date}}" start="1978-01-01" end="3000-12-31" bindchange="bindDateChange">  
+          <view class="picker">  
+              <text class='pic-text'>选择时间</text>
+              <image class='pic-img' src='image/shangbao-jinru.png'></image>
+          </view>  
+        </picker> 
+    </view>
+    <view class='myscore-item'>
+        <view>
+            <view>水电水利工程</view>
+            <text>2018-05-09</text>
+        </view>
+        <view>+2</view>
+    </view>
+    <view class='myscore-item'>
+        <view>
+            <view>水电水利工程</view>
+            <text>2018-05-09</text>
+        </view>
+        <view>+2</view>
+    </view>
+    <view class='myscore-item'>
+        <view>
+            <view>水电水利工程</view>
+            <text>2018-05-09</text>
+        </view>
+        <view>+2</view>
+    </view>
+    <view class='myscore-item'>
+        <view>
+            <view>水电水利工程</view>
+            <text>2018-05-09</text>
+        </view>
+        <view>+2</view>
+    </view>
+    <view class='myscore-item'>
+        <view>
+            <view>水电水利工程</view>
+            <text>2018-05-09</text>
+        </view>
+        <view>+2</view>
+    </view>
+    <view class='myscore-item'>
+        <view>
+            <view>水电水利工程</view>
+            <text>2018-05-09</text>
+        </view>
+        <view>+2</view>
+    </view>
+    <view class='myscore-item'>
+        <view>
+            <view>水电水利工程</view>
+            <text>2018-05-09</text>
+        </view>
+        <view>+2</view>
+    </view>
+    <view class='myscore-item'>
+        <view>
+            <view>水电水利工程</view>
+            <text>2018-05-09</text>
+        </view>
+        <view>+2</view>
+    </view>
+</view>
+<!-- <image src='images/myscore.png'></image> -->
+

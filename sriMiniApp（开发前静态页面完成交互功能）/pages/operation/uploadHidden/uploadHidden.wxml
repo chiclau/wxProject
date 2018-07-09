@@ -1,0 +1,68 @@
+<view class="page-section">
+  <form bindsubmit='submit'>
+    <view class="index-desc">
+      <view class='view-same'>项目名称 :</view>
+      <block wx:if="{{items == null}}">
+        <view style="margin-top:24rpx;" name='gongchengbuwei' bindtap='opention'>恒河水利</view>
+      </block>
+      <block wx:if="{{items != null}}">
+        <text style="margin-top:24rpx;" name='gongchengbuwei' placeholder="请输入" bindtap='opention'>{{items}}</text>
+      </block>
+    </view>
+    <view class="index-desc">
+      <view class='view-same'>隐患标题 :</view>
+      <input placeholder-style="color:#c7c7c7" name='gongchengmingcheng' placeholder="请输入" />
+    </view>
+    <view class="index-desc">
+      <view class='view-same'>工程部位 :</view>
+      <input placeholder-style="color:#c7c7c7" name='shigongdanwei' placeholder="请输入" />
+    </view>
+    <view class="index-desc">
+      <view class='view-same'>上报人 :</view>
+      <view name='paichashijian'  style="margin-top:24rpx;">张三</view>
+    </view>
+    <view class="index-desc">
+      <view class='view-same'>上报时间 :</view>
+      <view name='paichashijian'  style="margin-top:24rpx;">2018-06-20</view>
+    </view>
+    <view class="index-desc">
+      <view class='view-zone'>现场存在的问题 :</view>
+      <textarea placeholder="请输入问题情况限100个字" placeholder-style="color:#767676;" />
+    </view>
+
+    <!-- 展示选取的照片和选择照片 -->
+    <view class="index-desc-imges">
+      <view class='view-zone'>图片信息 :</view>
+      <view class="weui-uploader__hd">
+        <view class="weui-uploader__title">点击可预览选好的图片</view>
+
+      </view>
+      <scroll-view class="scroll-view_H" scroll-x="true" style="width: 95%">
+        <view class="weui-uploader__files">
+          <block wx:for="{{imageList}}" wx:for-item="image">
+            <view class="scroll-view-item_H demo-text-1">
+              <image class='yinhuanshangbao-image' src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+              <view class="icon-small-wrp" data-index="{{index}}" bindtap="deleteImage">
+                <icon class="icon-small" size="20" type="cancel"></icon>
+              </view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+      <picker range="{{sourceType}}" bindchange="sourceTypeChange" class="picker-image">
+        <image class="scroll-view-item_H" src="../../../image/plus.png"></image>
+      </picker>
+      <image class="scroll-view-item_H" src="../../../image/record.png"></image>
+    </view>
+
+
+    <!-- 录音功能 -->
+    <!--<button class="page-body-button" style="margin-top:20rpx;" bindtap='uploadImages'>上传图片</button>
+    <button class="page-body-button" style="margin-top:20rpx;" bindtap='start'>开始录音</button>
+    <button bindtap='play'>播放录音</button>
+    <button bindtap='stop'>停止录音</button>
+    <button class="page-body-button" bindtap="chooseimage">录像</button>-->
+  <button class="page-body-button" from-type='submit'>暂存箱</button>
+  <button class="page-body-button" from-type='submit' bindtap="login">提交</button>
+  </form>
+</view>

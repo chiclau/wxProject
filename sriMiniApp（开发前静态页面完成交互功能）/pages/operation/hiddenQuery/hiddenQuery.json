@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "安全隐患排查微信管理平台系统平台系统工程",
+  "usingComponents": {
+    "newreport": "../../../component/report/newreport/newreport",
+    "audit":"../../../component/screening/audit/audit",
+    "upreport":"../../../component/screening/upreport/upreport",
+    "count": "../../../component/screening/count/count",
+    "select":"../../../component/screening/select/select"
+  }
+}

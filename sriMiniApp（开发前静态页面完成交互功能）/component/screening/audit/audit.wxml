@@ -1,0 +1,66 @@
+<!-- 顶部过滤选择框 -->
+<view class="product-list">
+  <!-- 下拉菜单 -->
+  <view class="choice-bar">
+    <view bindtap="choiceItem" data-item="1" class="chioce-item chioce-item-first" hover-class="click-once-opaque">
+      <text class="{{chioceTime?'chioce-item-text-selected':'chioce-item-text'}}">{{activeTimeName}}</text>
+      <image class="icon-chioce" src="{{timeChioceIcon}}"></image>
+    </view>
+    <view bindtap="choiceItem" data-item="2" class="chioce-item" hover-class="click-once-opaque">
+      <text class="{{chioceProj?'chioce-item-text-selected':'chioce-item-text'}}">{{activeProjName}}</text>
+      <image class="icon-chioce" src="{{projChioceIcon}}"></image>
+    </view>
+    <view bindtap="choiceItem" data-item="3" class="chioce-item chioce-item-last" hover-class="click-once-opaque">
+    <text class="{{chioceState?'chioce-item-text-selected':'chioce-item-text'}}">状态</text>
+      <image class="icon-chioce" src="{{stateChioceIcon}}"></image>
+    </view>
+
+    <!-- 根据时间查询 catchtap="selectProj" -->
+    <view class="time-list{{!chioceTime?' chioce-list-hide':' chioce-list-show'}}">
+      <view class="time-item">
+        <view class="time-text">时间段选择</view>
+        <view class='time-container'>
+          <!-- 左侧时间 -->
+          <view class="time-start">
+            <picker mode="date" value="{{dateleft}}" start="1900-01-01" end="3000-09-01" bindchange="bindDateLeft">
+              <view>{{dateleft}}</view>
+            </picker>
+          </view>
+          <view class='time-center'></view>
+          <!-- 右侧时间 -->
+          <view class="time-end">
+            <picker mode="date" value="{{dateright}}" start="1900-01-01" end="3000-09-01" bindchange="bindDateRight">
+              <view>{{dateright}}</view>
+            </picker>
+          </view>
+        </view>
+        <button catchtap="resetState" class="page-body-button" type="default">重置</button>
+        <button catchtap="stateButtonClick" class="page-body-button" type="primary" style="background: #5387ff;">确定</button>
+      </view>
+    </view>
+
+    <!-- 根据工程查询 -->
+    <view class="proj-list{{!chioceProj?' chioce-list-hide':' chioce-list-show'}}">
+      <view class="proj-left">
+        <view wx:for="{{projList}}" catchtap="selectProjParent" data-index="{{index}}" class="proj-parent{{index==activeProjParentIndex||index==0&&activeProjParentIndex==-1?' proj-parent-active':''}}" hover-class="click-once">{{item.value}}</view>
+      </view>
+      <view class="proj-right">
+        <scroll-view scroll-y class="scroll-proj" scroll-top="{{scrollTop}}" scroll-into-view="{{scrollIntoView}}">
+          <view wx:for="{{projList[activeProjParentIndex==-1?0:activeProjParentIndex].proj}}" catchtap="selectProjChildren" data-index="{{index}}" class="proj-children" hover-class="click-once">{{item}}</view>
+        </scroll-view>
+      </view>
+    </view>
+
+    <!-- 根据项目状态 -->
+    <view class="state-list{{!chioceState?' chioce-list-hide':' chioce-list-show'}}">
+      <view wx:for="{{stateList}}" catchtap="selectState" data-index="{{index}}" class="state-item" hover-class="click-once">{{item.value}}
+        <image hidden="{{!item.selected}}" class="icon-selected" src="../images/icon-selected.png"></image>
+      </view>
+    </view>
+  </view>
+  <view bindtap="hideAllChioce" class="mask" hidden="{{!chioceTime&&!chioceProj&&!chioceState}}">
+  </view>
+  <view class="newreport">
+    <newreport list="{{list}}" types="{{types}}"/>
+  </view>
+</view>

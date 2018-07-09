@@ -1,0 +1,168 @@
+<!-- 顶部过滤选择框 -->
+<view class="product-list">
+  <!-- 下拉菜单 -->
+  <view class="choice-bar">
+    <view bindtap="choiceItem" data-item="1" class="chioce-item chioce-item-first" hover-class="click-once-opaque">
+      <text class="{{chioceTime?'chioce-item-text-selected':'chioce-item-text'}}">{{activeTimeName}}</text>
+      <image class="icon-chioce" src="{{timeChioceIcon}}"></image>
+    </view>
+    <view bindtap="choiceItem" data-item="2" class="chioce-item" hover-class="click-once-opaque">
+      <text class="{{chioceProj?'chioce-item-text-selected':'chioce-item-text'}}">{{activeProjName}}</text>
+      <image class="icon-chioce" src="{{projChioceIcon}}"></image>
+    </view>
+
+    <!-- 根据时间查询 catchtap="selectProj" -->
+    <view class="time-list{{!chioceTime?' chioce-list-hide':' chioce-list-show'}}">
+      <view class="time-item">
+        <view class="time-text">时间段选择</view>
+        <view class='time-container'>
+          <!-- 左侧时间 -->
+          <view class="time-start">
+            <picker mode="date" value="{{dateleft}}" start="1900-01-01" end="3000-09-01" bindchange="bindDateLeft">
+              <view>{{dateleft}}</view>
+            </picker>
+          </view>
+          <view class='time-center'></view>
+          <!-- 右侧时间 -->
+          <view class="time-end">
+            <picker mode="date" value="{{dateright}}" start="1900-01-01" end="3000-09-01" bindchange="bindDateRight">
+              <view>{{dateright}}</view>
+            </picker>
+          </view>
+        </view>
+        <button catchtap="resetState" class="page-body-button" type="default">重置</button>
+        <button catchtap="stateButtonClick" class="page-body-button" type="primary" style="background: #5387ff;">确定</button>
+      </view>
+    </view>
+
+    <!-- 根据工程查询 -->
+    <view class="proj-list{{!chioceProj?' chioce-list-hide':' chioce-list-show'}}">
+      <view class="proj-left">
+        <view wx:for="{{projList}}" catchtap="selectProjParent" data-index="{{index}}" class="proj-parent{{index==activeProjParentIndex||index==0&&activeProjParentIndex==-1?' proj-parent-active':''}}" hover-class="click-once">{{item.value}}</view>
+      </view>
+      <view class="proj-right">
+        <scroll-view scroll-y class="scroll-proj" scroll-top="{{scrollTop}}" scroll-into-view="{{scrollIntoView}}">
+          <view wx:for="{{projList[activeProjParentIndex==-1?0:activeProjParentIndex].proj}}" catchtap="selectProjChildren" data-index="{{index}}" class="proj-children" hover-class="click-once">{{item}}</view>
+        </scroll-view>
+      </view>
+    </view>
+
+    <!-- 根据项目状态 -->
+    <view class="state-list{{!chioceState?' chioce-list-hide':' chioce-list-show'}}">
+      <view wx:for="{{stateList}}" catchtap="selectState" data-index="{{index}}" class="state-item" hover-class="click-once">{{item.value}}
+        <image hidden="{{!item.selected}}" class="icon-selected" src="../images/icon-selected.png"></image>
+      </view>
+    </view>
+  </view>
+  <view bindtap="hideAllChioce" class="mask" hidden="{{!chioceTime&&!chioceProj&&!chioceState}}">
+  </view>
+  <view class="newreport">
+
+
+
+<view class='count-container'>
+  <image src='../images/tongji-beijingtu.png' class='count-img'></image>
+  <view class='count-left'>
+    <text>总数/已复查</text>
+    <text>60/59</text>
+  </view>
+  <view class='count-right-top'>
+    <text>重大隐患/已复查</text>
+    <text>20/19</text>
+  </view>
+  <view class='count-right-bottom'>
+    <text>一般隐患/已复查</text>
+    <text>36/35</text>
+  </view>
+</view>
+<view class='count-container-bottom'>
+  <view class='count-container-bTop'>
+    <view>|</view>
+    <text>隐患统计</text>
+  </view>
+  <view class='count-container-bMiddle'>
+    <view class='top'>
+      <image src='../images/tongji-yibanyinhuan.png'></image>
+      <text>一般隐患 : 23</text>
+    </view>
+    <view class='bottom'>
+      <view>
+        <view>
+          <image src='../images/tongji-renshen.png'></image>
+          <text>人身安全隐患 : 2</text>
+        </view>
+        <view>
+          <image src='../images/tongji-dianli.png'></image>
+          <text>电力安全事故隐患 : 4</text>
+        </view>
+        <view>
+          <image src='../images/tongji-shebei.png'></image>
+          <text>设备设施事故隐患 : 2</text>
+        </view>
+      </view>
+      <view>
+        <view>
+          <image src='../images/tongji-daba.png'></image>
+          <text>大坝安全隐患 : 3</text>
+        </view>
+        <view>
+          <image src='../images/tongji-anquan.png'></image>
+          <text>安全管理隐患 : 4</text>
+        </view>
+        <view>
+          <image src='../images/tongji-qita.png'></image>
+          <text>其他事故隐患 : 1</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='count-container-bMiddle'>
+    <view class='top'>
+      <image src='../images/tongji-zhongdayinhuan.png'></image>
+      <text>重大隐患 : 14</text>
+    </view>
+    <view class='bottom'>
+      <view>
+        <view>
+          <image src='../images/tongji-renshen.png'></image>
+          <text>人身安全隐患 : 1</text>
+        </view>
+        <view>
+          <image src='../images/tongji-dianli.png'></image>
+          <text>电力安全事故隐患 : 0</text>
+        </view>
+        <view>
+          <image src='../images/tongji-shebei.png'></image>
+          <text>设备设施事故隐患 : 7</text>
+        </view>
+      </view>
+      <view>
+        <view>
+          <image src='../images/tongji-daba.png'></image>
+          <text>大坝安全隐患 : 2</text>
+        </view>
+        <view>
+          <image src='../images/tongji-anquan.png'></image>
+          <text>安全管理隐患 : 3</text>
+        </view>
+        <view>
+          <image src='../images/tongji-qita.png'></image>
+          <text>其他事故隐患 : 6</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+
+  
+  </view>
+</view>
+
+
+
+
+
+

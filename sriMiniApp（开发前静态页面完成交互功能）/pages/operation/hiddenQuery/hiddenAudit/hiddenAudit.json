@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "隐患审核",
+  "usingComponents": {
+    "audit" : "../../../../component/report/audit/audit",
+    "zan-cell": "../../../../component/comm/cell/index",
+    "zan-cell-group": "../../../../component/comm/cell-group/index",
+    "zan-panel": "../../../../component/comm/panel/index",
+    "zan-steps": "../../../../component/comm/steps/index"
+  }
+}

@@ -1,0 +1,19 @@
+<image class='homepage-img' src='kind/wode-beijingtu.png'></image>
+<view class="index">
+  <view class="index-hd">
+    <image class="index-logo" src="kind/shouye-logo@3x.png"></image>
+    <view class="index-desc">
+      <input placeholder-style="color:#c7c7c7" placeholder="搜索隐患问题" name='serch' />
+    </view>
+  </view>
+  <!-- 引入自定义常用功能组件 -->
+  <comfunctions/>
+  <!-- newHidden模块的样式 -->
+  <view class='newHidden'>
+    <view class='newHidden-left'></view>
+    <view class='newHidden-center'>最新隐患</view>
+    <view class='newHidden-right'>NEW REPORT</view>
+  </view>
+  <!-- 引用自定义隐患组件 -->
+  <newreport list="{{list}}"/>
+</view>

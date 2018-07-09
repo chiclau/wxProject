@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/basics/login/login",
+    "pages/basics/my/my",
+    "pages/basics/my/myScore/myScore",
+    "pages/basics/homePage/homePage",
+    "pages/operation/hiddenQuery/hiddenAbarbeitung/hiddenAbarbeitung",
+    "pages/operation/uploadHidden/uploadHidden",
+    "pages/operation/hiddenQuery/hiddenReview/hiddenReview",
+    "pages/basics/message/message",
+    "pages/operation/hiddenQuery/hiddenQuery",
+    "pages/operation/clockin/clockin",
+    "pages/operation/hiddenQuery/hiddenAudit/hiddenAudit",
+    "pages/operation/hiddenDetails/hiddenDetails"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#457afe",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/basics/homePage/homePage",
+        "iconPath": "image/shouye-shouye@3x.png",
+        "selectedIconPath": "image/shouye-xuanzhe@3x.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/basics/message/message",
+        "iconPath": "image/xiaoxi@3x.png",
+        "selectedIconPath": "image/xiaoxi-xuanzhe.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/basics/my/my",
+        "iconPath": "image/wode.png",
+        "selectedIconPath": "image/wode@3x.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

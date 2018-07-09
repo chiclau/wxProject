@@ -1,0 +1,54 @@
+.container-big {
+  height: 120rpx;
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.msg-left {
+  width: 20%;
+  height: 120rpx;
+}
+
+.msg-img {
+  width: 90rpx;
+  height: 90rpx;
+  background: yellow;
+  border-radius: 45rpx;
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+}
+
+.msg-right {
+  width: 80%;
+  height: 119rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+
+.msg-right text:nth-child(1) {
+  width: 400rpx;
+  display: inline-block;
+  margin-top: 10rpx;
+  color: #4c4c4c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+}
+
+.msg-right text:nth-child(2) {
+  position: relative;
+  top: -12rpx;
+  left: 15rpx;
+  font-size: 26rpx;
+  color: #c7c7c7;
+}
+
+.msg-right text:nth-child(3) {
+  width: 97%;
+  font-size: 26rpx;
+  color: #c7c7c7;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
